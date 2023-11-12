@@ -12,4 +12,16 @@ $color-secondary-contrastText: palette.useColor(secondary, contrastText);
 $color-tertiary-main: palette.useColor(tertiary, main);
 $color-tertiary-contrastText: palette.useColor(tertiary, contrastText);
 
+$color-error-main: palette.useColor(error, main);
+
+$color-gray-100: palette.useColor(gray, 100);
+$color-gray-200: palette.useColor(gray, 200);
+$color-gray-300: palette.useColor(gray, 300);
+$color-gray-400: palette.useColor(gray, 400);
+$color-gray-500: palette.useColor(gray, 500);
+$color-gray-600: palette.useColor(gray, 600);
+$color-gray-700: palette.useColor(gray, 700);
+$color-gray-800: palette.useColor(gray, 800);
+$color-gray-900: palette.useColor(gray, 900);
+
 $min-width-tablet: breakpoints.useBreakpoint(tablet, min);

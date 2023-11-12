@@ -1,0 +1,19 @@
+<div class="fem-input">
+  <div class="fem-input-labels">
+    <label>{{label}}</label>
+
+    @if (formControl.invalid) {
+      <label class="error">ERROR</label>
+    }
+  </div>
+  <div class="fem-input-container">
+    <input
+      [type]="type"
+      [placeholder]="placeholder"
+      [formControl]="formControl"
+      [ngClass]="{
+        'error': formControl.invalid,
+      }"
+    />
+  </div>
+</div>

@@ -22,6 +22,23 @@ $palette: (
     dark: #BBDFF5,
     light: #F8F9FE,
     contrastText: #9E9FA3
+  ),
+  error: (
+    main: #BD4D5B,
+    dark: #BD4D5B,
+    light: #BD4D5B,
+    contrastText: #FFFFFF,
+  ),
+  gray: (
+    100: #F5F5F5,
+    200: #EEEEEE,
+    300: #E0E0E0,
+    400: #BDBDBD,
+    500: #9E9E9E,
+    600: #757575,
+    700: #616161,
+    800: #424242,
+    900: #212121,
   )
 );
 
