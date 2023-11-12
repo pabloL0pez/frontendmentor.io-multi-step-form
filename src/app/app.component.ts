@@ -5,7 +5,7 @@ import { ButtonComponent } from './components/common/button/button.component';
 import { ColorType } from './common/palette/palette.types';
 import { ButtonVariant } from './components/common/button/button.types';
 import { InputComponent } from './components/common/input/input.component';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +19,9 @@ export class AppComponent {
   readonly colorTypeRef = ColorType;
 
   formControl = new FormControl('');
+  validators = [
+    Validators.email,
+  ];
   
   title = 'frontendmentor.io-multi-step-form';
 }
