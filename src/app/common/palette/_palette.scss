@@ -1,0 +1,43 @@
+$palette: (
+  primary: (
+    main: #0F3163,
+    dark: #0F3163,
+    light: #164B89,
+    contrastText: #FFFFFF
+  ),
+  secondary: (
+    main: #5046F3,
+    dark: #5046F3,
+    light: #938CFE,
+    contrastText: #FFFFFF
+  ),
+  tertiary: (
+    main: #FFFFFF,
+    dark: #FFFFFF,
+    light: #FFFFFF,
+    contrastText: #9E9FA3,
+  ),
+  highlight: (
+    main: #F8F9FE,
+    dark: #BBDFF5,
+    light: #F8F9FE,
+    contrastText: #9E9FA3
+  )
+);
+
+@function useColor($color, $shade){
+  @if map-has-key($palette, $color){
+    $color: map-get($palette, $color);
+
+      @if map-has-key($color, $shade){
+        $tone: map-get($color, $shade);
+        @return $tone;
+      }
+
+      @warn "unknown shade `#{$shade}` in color";
+      @return null;        
+  }
+
+  @warn "unknown color `#{$color}` in palette";
+  @return null;
+}
