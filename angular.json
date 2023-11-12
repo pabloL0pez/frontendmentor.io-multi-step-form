@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "fem",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
@@ -29,8 +29,17 @@
               "src/favicon.ico",
               "src/assets"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/common",
+                "src/app/common/breakpoints",
+                "src/app/common/palette",
+                "src/app/common/typography"
+              ]
+            },
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/common/typography/_typography.scss"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -95,7 +104,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/common/typography/_typography.scss"
             ],
             "scripts": []
           }

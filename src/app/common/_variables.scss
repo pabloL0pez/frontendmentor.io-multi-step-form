@@ -1,0 +1,15 @@
+@use './palette/palette' as palette;
+@use './breakpoints/breakpoints' as breakpoints;
+
+$color-primary-main: palette.useColor(primary, main);
+$color-primary-light: palette.useColor(primary, light);
+$color-primary-contrastText: palette.useColor(primary, contrastText);
+
+$color-secondary-main: palette.useColor(secondary, main);
+$color-secondary-light: palette.useColor(secondary, light);
+$color-secondary-contrastText: palette.useColor(secondary, contrastText);
+
+$color-tertiary-main: palette.useColor(tertiary, main);
+$color-tertiary-contrastText: palette.useColor(tertiary, contrastText);
+
+$min-width-tablet: breakpoints.useBreakpoint(tablet, min);

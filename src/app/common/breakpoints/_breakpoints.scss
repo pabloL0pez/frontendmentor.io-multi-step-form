@@ -1,0 +1,35 @@
+$breakpoints: (
+  mobile: (
+    min: '320px',
+    max: '480px',
+  ),
+  tablet: (
+    min: '481px',
+    max: '768px',
+  ),
+  tabletLandscape: (
+    min: '769px',
+    max: '1024px',
+  ),
+  desktop: (
+    min: '1025px',
+    max: '1200px',
+  ),
+);
+
+@function useBreakpoint($screen, $size){
+  @if map-has-key($breakpoints, $screen){
+    $screen: map-get($breakpoints, $screen);
+
+      @if map-has-key($screen, $size){
+        $screenSize: map-get($screen, $size);
+        @return $screenSize;
+      }
+
+      @warn "unknown size `#{$size}` in screen";
+      @return null;        
+  }
+
+  @warn "unknown resolution `#{$color}` in breakpoints";
+  @return null;
+}
