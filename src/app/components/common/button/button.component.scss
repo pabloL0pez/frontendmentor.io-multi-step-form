@@ -1,0 +1,60 @@
+@import 'variables';
+
+button {
+  border: none;
+  cursor: pointer;
+  
+  &.contained {
+    padding: 10px 20px;
+    border-radius: 5px;
+
+    @media(min-width: $min-width-tablet) {
+      border-radius: 10px;
+    }
+
+    &.primary {
+      color: $color-primary-contrastText;
+      background-color: $color-primary-main;
+  
+      &.highlight:hover {
+        background-color: $color-primary-light;
+      }
+  
+      &:active {
+        background-color: $color-primary-light;
+      }
+    }
+  
+    &.secondary {
+      color: $color-secondary-contrastText;
+      background-color: $color-secondary-main;
+  
+      &.highlight:hover {
+        background-color: $color-secondary-light;
+      }
+  
+      &:active {
+        background-color: $color-secondary-light;
+      }
+    }
+
+    &.tertiary {
+      color: $color-tertiary-contrastText;
+      background-color: $color-tertiary-main;
+    }
+  }
+
+  &.text {
+    text-decoration: underline;
+    color: $color-tertiary-contrastText;
+    background-color: transparent;
+  
+    &.highlight:hover {
+      color: $color-secondary-light;
+    }
+  
+    &:active {
+      color: $color-secondary-light;
+    }
+  }
+}
