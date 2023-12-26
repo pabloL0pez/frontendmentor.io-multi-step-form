@@ -1,3 +1,15 @@
+<h1>Inputs</h1>
+<section>
+  <h2>Input</h2>
+  <fem-input
+    [formControl]="formControl"
+    [defaultValue]="'Default value'"
+    [label]="'Label'"
+    [placeholder]="'Placeholder...'"
+    [validators]="validators"
+  />
+</section>
+
 <h1>Botones</h1>
 <section>
   <h2>Contained - Primary</h2>
@@ -30,18 +42,6 @@
   >
     Text
   </fem-button>
-</section>
-
-<h1>Inputs</h1>
-<section>
-  <h2>Input</h2>
-  <fem-input
-    [formControl]="formControl"
-    [defaultValue]="'Default value'"
-    [label]="'Label'"
-    [placeholder]="'Placeholder...'"
-    [validators]="validators"
-  />
 </section>
 
 <router-outlet></router-outlet>
